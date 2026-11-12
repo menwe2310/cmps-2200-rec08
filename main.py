@@ -44,3 +44,7 @@ def n_components(graph):
         node = nodes.pop()
         r_nodes = reachable(graph, node)
         count += 1
+        for r_node in r_nodes:
+            if r_node in nodes:
+                nodes.remove(r_node)
+    return count
